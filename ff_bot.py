@@ -117,7 +117,7 @@ def random_phrase():
                'It\s over Cole, I have the playoffs',
                'Fuck the Packers',
                'Hello Discord my old friend',
-               'IDIOTS! SAVAGES! IDIOTS! IDIOTS!',
+               'Hello There!',
                'I\'m capable of so much more',
                'Demonstrate Value, Engage Physically, Nurture Dependence, Neglect Emotionally, Inspire Hope, Separate Entirely']
     return [random.choice(phrases)]
