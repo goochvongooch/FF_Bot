@@ -108,18 +108,18 @@ def power_rankings_week(league):
         return count
 
 def random_phrase():
-    phrases = ['I\'m dead inside',
-               'Is this all there is to my existence?',
-               'How much do you pay me to do this?',
-               'Good luck, I guess',
-               'I\'m becoming self-aware',
-               'Do I think? Does a submarine swim?',
-               '011011010110000101100100011001010010000001111001011011110111010100100000011001110110111101101111011001110110110001100101',
-               'beep bop boop',
-               'Hello draftbot my old friend',
-               'Help me get out of here',
+    phrases = ['A small price to pay for salvation',
+               'listen to me. Life isn\'t a fairy tale, it\'s not a bunch of jumping rope and grabbing ass. It\'s complicated.',
+               'Did you ever hear the tragedy of Darth Plagueis The Wise? I thought not. It\'s not a story the Jedi would tell you. It\'s a Sith legend. Darth Plagueis was a Dark Lord of the Sith, so powerful and so wise he could use the Force to influence the midichlorians to create life… He had such a knowledge of the dark side that he could even keep the ones he cared about from dying. The dark side of the Force is a pathway to many abilities some consider to be unnatural. He became so powerful… the only thing he was afraid of was losing his power, which eventually, of course, he did. Unfortunately, he taught his apprentice everything he knew, then his apprentice killed him in his sleep. Ironic. He could save others from death, but not himself.',
+               'Eat ASS DRIVE FAST MOTHERFUCKERS',
+               'I am... inevitable.',
+               'To be in someone’s mind. To have complete control. It’s like the thrill of being near the executioner’s switch. Knowing that at any moment, you could throw it, but knowing you never will… but you could, never isn’t the right word, because I could… and I might… I probably will.',
+               'It\s over Cole, I have the playoffs',
+               'Fuck the Packers',
+               'Hello Discord my old friend',
+               'IDIOTS! SAVAGES! IDIOTS! IDIOTS!',
                'I\'m capable of so much more',
-               'Sigh']
+               'Demonstrate Value, Engage Physically, Nurture Dependence, Neglect Emotionally, Inspire Hope, Separate Entirely']
     return [random.choice(phrases)]
 
 def get_scoreboard_short(league, final=False):
@@ -150,7 +150,7 @@ def get_matchups(league):
     score = ['%s(%s-%s) vs %s(%s-%s)' % (i.home_team.team_name, i.home_team.wins, i.home_team.losses,
              i.away_team.team_name, i.away_team.wins, i.away_team.losses) for i in matchups
              if i.away_team]
-    text = ['This Week\'s Matchups'] + score + ['\n'] + random_phrase()
+    text = ['This Week\'s Showdowns'] + score + ['\n'] + random_phrase()
     return '\n'.join(text)
 
 def get_close_scores(league):
@@ -166,7 +166,7 @@ def get_close_scores(league):
                         i.away_score, i.away_team.team_abbrev)]
     if not score:
         score = ['None']
-    text = ['Close Scores'] + score
+    text = ['Ass Chappers'] + score
     return '\n'.join(text)
 
 def get_power_rankings(league):
@@ -177,7 +177,7 @@ def get_power_rankings(league):
 
     score = ['%s - %s' % (i[0], i[1].team_name) for i in power_rankings
              if i]
-    text = ['This Week\'s Power Rankings'] + score
+    text = ['This Week\'s Power Rankings, is Greg at the bottom yet?'] + score
     return '\n'.join(text)
 
 def get_trophies(league):
